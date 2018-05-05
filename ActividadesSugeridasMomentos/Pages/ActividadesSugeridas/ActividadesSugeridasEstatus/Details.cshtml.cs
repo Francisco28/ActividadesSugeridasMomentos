@@ -13,7 +13,8 @@ namespace ActividadesSugeridasMomentos.Pages.ActividadesSugeridas.ActividadesSug
     public class DetailsModel : PageModel
     {
         private readonly ActividadesSugeridasMomentos.Models.Data.ApplicationDbContext _context;
-
+        public int? idAct;
+        public int idacti;
         public DetailsModel(ActividadesSugeridasMomentos.Models.Data.ApplicationDbContext context)
         {
             _context = context;
@@ -23,6 +24,8 @@ namespace ActividadesSugeridasMomentos.Pages.ActividadesSugeridas.ActividadesSug
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
+            idAct = id;
+            idacti = Convert.ToInt32(Request.Query["idacti"]);
             if (id == null)
             {
                 return NotFound();

@@ -5,32 +5,41 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+
+<h2>Tipos de Actividades Sugeridas</h2>
+
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a class="btn btn-success btn-md active" role="button" asp-page="Create">Crear Nuevo Tipo de Actividad</a>
 </p>
+
 <table class="table">
     <thead>
         <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.eva_cat_tipo_actividades_sugeridas[0].DesTipoActividadSug)
-                </th>
-            <th></th>
+            <th>
+                Id
+            </th>
+            <th>
+                Descripción
+            </th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.eva_cat_tipo_actividades_sugeridas) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.DesTipoActividadSug)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.IdTipoActividadSug">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.IdTipoActividadSug">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.IdTipoActividadSug">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.eva_cat_tipo_actividades_sugeridas)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdTipoActividadSug)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DesTipoActividadSug)
+                </td>
+                <td>
+                    <a class="btn btn-default btn-md active" role="button" asp-page="./Edit" asp-route-id="@item.IdTipoActividadSug">Editar</a> |
+                    <a class="btn btn-info btn-md active" role="button" asp-page="./Details" asp-route-id="@item.IdTipoActividadSug">Detalles</a> |
+                    <a class="btn btn-danger btn-md active" role="button" asp-page="./Delete" asp-route-id="@item.IdTipoActividadSug">Eliminar</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

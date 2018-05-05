@@ -5,26 +5,32 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>Details</h2>
 
+
+<h2>Detalles de Actividad Sugerida</h2>
 <div>
-    <h4>eva_cat_actividades_sugeridas</h4>
     <hr />
-    <dl class="dl-horizontal">
+    <dl>
         <dt>
-            @Html.DisplayNameFor(model => model.eva_cat_actividades_sugeridas.Tema)
+            Id
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.eva_cat_actividades_sugeridas.IdActividadSugerida)
+        </dd>
+        <dt>
+            Tema
         </dt>
         <dd>
             @Html.DisplayFor(model => model.eva_cat_actividades_sugeridas.Tema)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.eva_cat_actividades_sugeridas.DesActividad)
+            Descripción
         </dt>
         <dd>
             @Html.DisplayFor(model => model.eva_cat_actividades_sugeridas.DesActividad)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.eva_cat_actividades_sugeridas.TipoActividadesSugeridas)
+            Tipo
         </dt>
         <dd>
             @Html.DisplayFor(model => model.eva_cat_actividades_sugeridas.TipoActividadesSugeridas.DesTipoActividadSug)
@@ -32,6 +38,6 @@
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.eva_cat_actividades_sugeridas.IdActividadSugerida">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <a class="btn btn-default btn-md active" role="button" asp-page="./Edit" asp-route-id="@Model.eva_cat_actividades_sugeridas.IdActividadSugerida">Editar</a> |
+    <a class="btn btn-info btn-md active" role="button" asp-page="./Index">Regresar</a>
 </div>

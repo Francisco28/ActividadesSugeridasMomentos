@@ -5,54 +5,54 @@
     ViewData["Title"] = "Delete";
 }
 
-<h2>Delete</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Esta seguro que desea borrar este Estatus?</h3>
 <div>
-    <h4>eva_actividades_sug_estatus</h4>
+
     <hr />
-    <dl class="dl-horizontal">
+    <dl>
         <dt>
-            @Html.DisplayNameFor(model => model.eva_actividades_sug_estatus.FechaEstatus)
+            Fecha Registro
         </dt>
         <dd>
             @Html.DisplayFor(model => model.eva_actividades_sug_estatus.FechaEstatus)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.eva_actividades_sug_estatus.Actual)
+            Actual
         </dt>
         <dd>
             @Html.DisplayFor(model => model.eva_actividades_sug_estatus.Actual)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.eva_actividades_sug_estatus.Observacion)
+            Observación
         </dt>
         <dd>
             @Html.DisplayFor(model => model.eva_actividades_sug_estatus.Observacion)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.eva_actividades_sug_estatus.ActividadesSugeridas)
+            Descripción
         </dt>
         <dd>
             @Html.DisplayFor(model => model.eva_actividades_sug_estatus.ActividadesSugeridas.DesActividad)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.eva_actividades_sug_estatus.TipoActividadesSugeridas)
+            Tipo Actividad
         </dt>
         <dd>
             @Html.DisplayFor(model => model.eva_actividades_sug_estatus.TipoActividadesSugeridas.DesTipoActividadSug)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.eva_actividades_sug_estatus.TiposEstatus)
+            Tipo Estatus
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.eva_actividades_sug_estatus.TiposEstatus.IdTipoEstatus)
+            @Html.DisplayFor(model => model.eva_actividades_sug_estatus.TiposEstatus.DesTipoEstatus)
         </dd>
     </dl>
-    
+
     <form method="post">
         <input type="hidden" asp-for="eva_actividades_sug_estatus.IdEstatusDet" />
-        <input type="submit" value="Delete" class="btn btn-default" /> |
-        <a asp-page="./Index">Back to List</a>
+        <input type="submit" value="Borrar" class="btn btn-default" /> |
+        <a class="btn btn-info btn-md active" role="button" asp-page="./Index"
+           asp-route-id="@Model.idAct">Regresar</a>
     </form>
 </div>

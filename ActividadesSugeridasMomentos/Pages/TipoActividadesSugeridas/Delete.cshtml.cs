@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using ActividadesSugeridasMomentos.Models.ActividadesSugeridas;
 using ActividadesSugeridasMomentos.Models.Data;
+using ActividadesSugeridasMomentos.Models;
 
 namespace ActividadesSugeridasMomentos.Pages.TipoActividadesSugeridas
 {

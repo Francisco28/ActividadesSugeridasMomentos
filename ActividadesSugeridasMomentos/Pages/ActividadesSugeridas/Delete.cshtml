@@ -5,36 +5,40 @@
     ViewData["Title"] = "Delete";
 }
 
-<h2>Delete</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h2>¿Esta Seguro Que Desea Eliminar Esta Actividad Sugerida?</h2>
 <div>
-    <h4>eva_cat_actividades_sugeridas</h4>
     <hr />
-    <dl class="dl-horizontal">
+    <dl>
         <dt>
-            @Html.DisplayNameFor(model => model.eva_cat_actividades_sugeridas.Tema)
+            Id
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.eva_cat_actividades_sugeridas.IdActividadSugerida)
+        </dd>
+        <dt>
+            Tema
         </dt>
         <dd>
             @Html.DisplayFor(model => model.eva_cat_actividades_sugeridas.Tema)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.eva_cat_actividades_sugeridas.DesActividad)
+            Descripción
         </dt>
         <dd>
             @Html.DisplayFor(model => model.eva_cat_actividades_sugeridas.DesActividad)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.eva_cat_actividades_sugeridas.TipoActividadesSugeridas)
+            Tipo
         </dt>
         <dd>
             @Html.DisplayFor(model => model.eva_cat_actividades_sugeridas.TipoActividadesSugeridas.DesTipoActividadSug)
         </dd>
     </dl>
-    
+
     <form method="post">
         <input type="hidden" asp-for="eva_cat_actividades_sugeridas.IdActividadSugerida" />
-        <input type="submit" value="Delete" class="btn btn-default" /> |
-        <a asp-page="./Index">Back to List</a>
+        <input type="submit" value="Borrar" class="btn btn-danger" /> |
+        <a class="btn btn-info btn-md active" role="button" asp-page="./Index">Cancelar</a>
     </form>
 </div>

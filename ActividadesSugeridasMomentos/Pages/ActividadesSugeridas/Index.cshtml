@@ -5,44 +5,53 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+
+<h2>Actividades Sugeridas </h2>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create" class="btn btn-success btn-md active" role="button">Crear Nueva Actividad</a>
 </p>
 <table class="table">
     <thead>
         <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.eva_cat_actividades_sugeridas[0].Tema)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.eva_cat_actividades_sugeridas[0].DesActividad)
-                </th>
             <th>
-                @Html.DisplayNameFor(model => model.eva_cat_actividades_sugeridas[0].TipoActividadesSugeridas)
+                Id
             </th>
-            <th></th>
+            <th>
+                Tema
+            </th>
+            <th>
+                Descripción
+            </th>
+            <th>
+                Tipo
+            </th>
+
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.eva_cat_actividades_sugeridas) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Tema)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DesActividad)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TipoActividadesSugeridas.DesTipoActividadSug)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.IdActividadSugerida">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.IdActividadSugerida">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.IdActividadSugerida">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.eva_cat_actividades_sugeridas)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdActividadSugerida)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tema)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DesActividad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TipoActividadesSugeridas.DesTipoActividadSug)
+                </td>
+                <td>
+                    <a asp-page="./Edit" class="btn btn-default btn-md active" role="button" asp-route-id="@item.IdActividadSugerida">Editar</a> |
+                    <a asp-page="./Details" class="btn btn-info btn-md active" role="button" asp-route-id="@item.IdActividadSugerida">Detalles</a> |
+                    <a asp-page="./Delete" class="btn btn-danger btn-md active" role="button" asp-route-id="@item.IdActividadSugerida">Eliminar</a> |
+                    <a asp-page="./ActividadesSugeridasEstatus/Index" class="btn btn-warning active" role="button" asp-route-id="@item.IdActividadSugerida">Estatus</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

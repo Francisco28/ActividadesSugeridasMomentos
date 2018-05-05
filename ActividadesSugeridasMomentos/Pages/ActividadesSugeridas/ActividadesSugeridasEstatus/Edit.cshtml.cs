@@ -14,6 +14,8 @@ namespace ActividadesSugeridasMomentos.Pages.ActividadesSugeridas.ActividadesSug
     public class EditModel : PageModel
     {
         private readonly ActividadesSugeridasMomentos.Models.Data.ApplicationDbContext _context;
+        public int? idAct;
+        public int idacti;
 
         public EditModel(ActividadesSugeridasMomentos.Models.Data.ApplicationDbContext context)
         {
@@ -25,6 +27,9 @@ namespace ActividadesSugeridasMomentos.Pages.ActividadesSugeridas.ActividadesSug
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
+            idacti = Convert.ToInt32(Request.Query["idacti"]);
+
+            idAct = id;
             if (id == null)
             {
                 return NotFound();
@@ -39,10 +44,13 @@ namespace ActividadesSugeridasMomentos.Pages.ActividadesSugeridas.ActividadesSug
             {
                 return NotFound();
             }
-           ViewData["IdActividadSugerida"] = new SelectList(_context.ActividadesSugeridas, "IdActividadSugerida", "DesActividad");
-           ViewData["IdTipoActividadSug"] = new SelectList(_context.TipoActividadesSugeridas, "IdTipoActividadSug", "DesTipoActividadSug");
-           ViewData["IdTipoEstatus"] = new SelectList(_context.TiposEstatus, "IdTipoEstatus", "IdTipoEstatus");
+
+            ViewData["IdActividadSugerida"] = idacti;  // new SelectList(_context.ActividadesSugeridas, "IdActividadSugerida", "DesActividad");
+            ViewData["IdTipoActividadSug"] = idAct; // new SelectList(_context.TipoActividadesSugeridas, "IdTipoActividadSugerida", "DesTipoActividadSugerida");
+            ViewData["IdTipoEstatus"] = new SelectList(_context.Set<cat_tipo_estatus>(), "IdTipoEstatus", "DesTipoEstatus");
             return Page();
+
+            
         }
 
         public async Task<IActionResult> OnPostAsync()
@@ -52,25 +60,11 @@ namespace ActividadesSugeridasMomentos.Pages.ActividadesSugeridas.ActividadesSug
                 return Page();
             }
 
-            _context.Attach(eva_actividades_sug_estatus).State = EntityState.Modified;
+            
+            _context.ActividadesSugeridasEstatus.Add(eva_actividades_sug_estatus);
+            await _context.SaveChangesAsync();
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!eva_actividades_sug_estatusExists(eva_actividades_sug_estatus.IdEstatusDet))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return RedirectToPage("./Index");
+            return RedirectToPage("./Index", new { id = idAct });
         }
 
         private bool eva_actividades_sug_estatusExists(int id)

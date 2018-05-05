@@ -5,10 +5,10 @@
     ViewData["Title"] = "Edit";
 }
 
-<h2>Edit</h2>
 
-<h4>eva_actividades_sug_estatus</h4>
-<hr />
+
+<h2>Actividades Sugeridas Estatus - Editar</h2>
+
 <div class="row">
     <div class="col-md-4">
         <form method="post">
@@ -16,46 +16,45 @@
             <input type="hidden" asp-for="eva_actividades_sug_estatus.IdEstatusDet" />
             <div class="form-group">
                 <label asp-for="eva_actividades_sug_estatus.IdTipoActividadSug" class="control-label"></label>
-                <select asp-for="eva_actividades_sug_estatus.IdTipoActividadSug" class="form-control" asp-items="ViewBag.IdTipoActividadSug"></select>
-                <span asp-validation-for="eva_actividades_sug_estatus.IdTipoActividadSug" class="text-danger"></span>
+                <select asp-for="eva_actividades_sug_estatus.IdTipoActividadSug" class="form-control" asp-items="ViewBag.IdTipoActividadSug" readonly></select>
+                <span asp-validation-for="eva_actividades_sug_estatus.IdTipoActividadSug" class="text-danger" readonly></span>
             </div>
             <div class="form-group">
-                <label asp-for="eva_actividades_sug_estatus.IdActividadSugerida" class="control-label"></label>
-                <select asp-for="eva_actividades_sug_estatus.IdActividadSugerida" class="form-control" asp-items="ViewBag.IdActividadSugerida"></select>
-                <span asp-validation-for="eva_actividades_sug_estatus.IdActividadSugerida" class="text-danger"></span>
+                <label asp-for="eva_actividades_sug_estatus.IdActividadSugerida" class="control-label" type="hidden"></label>
+                <select asp-for="eva_actividades_sug_estatus.IdActividadSugerida" class="form-control" asp-items="ViewBag.IdActividadSugerida" type="hidden"></select>
+                <span asp-validation-for="eva_actividades_sug_estatus.IdActividadSugerida" class="text-danger"> </span>
             </div>
             <div class="form-group">
                 <label asp-for="eva_actividades_sug_estatus.IdTipoEstatus" class="control-label"></label>
-                <select asp-for="eva_actividades_sug_estatus.IdTipoEstatus" class="form-control" asp-items="ViewBag.IdTipoEstatus"></select>
+                <select asp-for="eva_actividades_sug_estatus.IdTipoEstatus" class="form-control" asp-items="ViewBag.DesTipoEstatus">Tipo Estatus</select>
                 <span asp-validation-for="eva_actividades_sug_estatus.IdTipoEstatus" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="eva_actividades_sug_estatus.FechaEstatus" class="control-label"></label>
-                <input asp-for="eva_actividades_sug_estatus.FechaEstatus" class="form-control" />
+                <label asp-for="eva_actividades_sug_estatus.FechaEstatus" class="control-label">Fecha </label>
+                <input asp-for="eva_actividades_sug_estatus.FechaEstatus" class="form-control" readonly />
                 <span asp-validation-for="eva_actividades_sug_estatus.FechaEstatus" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <div class="checkbox">
-                    <label>
-                        <input asp-for="eva_actividades_sug_estatus.Actual" /> @Html.DisplayNameFor(model => model.Actual)
-                    </label>
-                </div>
+                <label asp-for="eva_actividades_sug_estatus.Actual" class="control-label" type="hidden">Actual</label>
+                <input asp-for="eva_actividades_sug_estatus.Actual" class="form-control" type="hidden" />
+                <span asp-validation-for="eva_actividades_sug_estatus.Actual" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="eva_actividades_sug_estatus.Observacion" class="control-label"></label>
+                <label asp-for="eva_actividades_sug_estatus.Observacion" class="control-label">Observación</label>
                 <input asp-for="eva_actividades_sug_estatus.Observacion" class="form-control" />
                 <span asp-validation-for="eva_actividades_sug_estatus.Observacion" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Guardar" class="btn btn-default" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Index" asp-route-id="@Model.idAct">Regresar</a>
 </div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

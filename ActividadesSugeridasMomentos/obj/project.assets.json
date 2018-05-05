@@ -13132,11 +13132,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\oFFICEdEPOT\\Google Drive\\Tec\\Aplicaciones Empresariales\\ActividadesSugeridas-Momentos\\ActividadesSugeridas-Momentos\\ActividadesSugeridasMomentos.csproj",
+      "projectUniqueName": "C:\\Users\\oFFICEdEPOT\\Google Drive\\Tec\\Aplicaciones Empresariales\\ActividadesSugeridasMomentos\\ActividadesSugeridasMomentos\\ActividadesSugeridasMomentos.csproj",
       "projectName": "ActividadesSugeridasMomentos",
-      "projectPath": "C:\\Users\\oFFICEdEPOT\\Google Drive\\Tec\\Aplicaciones Empresariales\\ActividadesSugeridas-Momentos\\ActividadesSugeridas-Momentos\\ActividadesSugeridasMomentos.csproj",
+      "projectPath": "C:\\Users\\oFFICEdEPOT\\Google Drive\\Tec\\Aplicaciones Empresariales\\ActividadesSugeridasMomentos\\ActividadesSugeridasMomentos\\ActividadesSugeridasMomentos.csproj",
       "packagesPath": "C:\\Users\\oFFICEdEPOT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\oFFICEdEPOT\\Google Drive\\Tec\\Aplicaciones Empresariales\\ActividadesSugeridas-Momentos\\ActividadesSugeridas-Momentos\\obj\\",
+      "outputPath": "C:\\Users\\oFFICEdEPOT\\Google Drive\\Tec\\Aplicaciones Empresariales\\ActividadesSugeridasMomentos\\ActividadesSugeridasMomentos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

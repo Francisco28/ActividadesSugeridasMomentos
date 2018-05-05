@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ActividadesSugeridasMomentos.Models.ActividadesSugeridas
+namespace ActividadesSugeridasMomentos.Models
 {
     public class eva_cat_tipo_actividades_sugeridas
     {

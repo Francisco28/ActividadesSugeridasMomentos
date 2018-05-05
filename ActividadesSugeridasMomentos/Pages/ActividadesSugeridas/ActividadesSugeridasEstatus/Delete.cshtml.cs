@@ -13,6 +13,7 @@ namespace ActividadesSugeridasMomentos.Pages.ActividadesSugeridas.ActividadesSug
     public class DeleteModel : PageModel
     {
         private readonly ActividadesSugeridasMomentos.Models.Data.ApplicationDbContext _context;
+        public int? idAct;
 
         public DeleteModel(ActividadesSugeridasMomentos.Models.Data.ApplicationDbContext context)
         {
@@ -24,6 +25,7 @@ namespace ActividadesSugeridasMomentos.Pages.ActividadesSugeridas.ActividadesSug
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
+            idAct = id;
             if (id == null)
             {
                 return NotFound();
@@ -56,7 +58,7 @@ namespace ActividadesSugeridasMomentos.Pages.ActividadesSugeridas.ActividadesSug
                 await _context.SaveChangesAsync();
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./Index", new { id = idAct });
         }
     }
 }

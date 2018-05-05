@@ -8,13 +8,14 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ActividadesSugeridasMomentos.Models.ActividadesSugeridas;
 using ActividadesSugeridasMomentos.Models.Data;
+using ActividadesSugeridasMomentos.Models;
 
 namespace ActividadesSugeridasMomentos.Pages.TipoActividadesSugeridas
 {
     public class EditModel : PageModel
     {
         private readonly ActividadesSugeridasMomentos.Models.Data.ApplicationDbContext _context;
-
+        public int? idAct;
         public EditModel(ActividadesSugeridasMomentos.Models.Data.ApplicationDbContext context)
         {
             _context = context;
@@ -25,6 +26,7 @@ namespace ActividadesSugeridasMomentos.Pages.TipoActividadesSugeridas
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
+            idAct = id;
             if (id == null)
             {
                 return NotFound();
@@ -64,7 +66,7 @@ namespace ActividadesSugeridasMomentos.Pages.TipoActividadesSugeridas
                 }
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./Index", new { id = idAct });
         }
 
         private bool eva_cat_tipo_actividades_sugeridasExists(int id)
