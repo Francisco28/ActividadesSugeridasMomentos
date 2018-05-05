@@ -1,0 +1,58 @@
+﻿@page
+@model ActividadesSugeridasMomentos.Pages.ActividadesSugeridas.ActividadesSugeridasEstatus.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>eva_actividades_sug_estatus</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="eva_actividades_sug_estatus.IdTipoActividadSug" class="control-label"></label>
+                <select asp-for="eva_actividades_sug_estatus.IdTipoActividadSug" class ="form-control" asp-items="ViewBag.IdTipoActividadSug"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="eva_actividades_sug_estatus.IdActividadSugerida" class="control-label"></label>
+                <select asp-for="eva_actividades_sug_estatus.IdActividadSugerida" class ="form-control" asp-items="ViewBag.IdActividadSugerida"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="eva_actividades_sug_estatus.IdTipoEstatus" class="control-label"></label>
+                <select asp-for="eva_actividades_sug_estatus.IdTipoEstatus" class ="form-control" asp-items="ViewBag.IdTipoEstatus"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="eva_actividades_sug_estatus.FechaEstatus" class="control-label"></label>
+                <input asp-for="eva_actividades_sug_estatus.FechaEstatus" class="form-control" />
+                <span asp-validation-for="eva_actividades_sug_estatus.FechaEstatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="eva_actividades_sug_estatus.Actual" /> @Html.DisplayNameFor(model => model.Actual))
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="eva_actividades_sug_estatus.Observacion" class="control-label"></label>
+                <input asp-for="eva_actividades_sug_estatus.Observacion" class="form-control" />
+                <span asp-validation-for="eva_actividades_sug_estatus.Observacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

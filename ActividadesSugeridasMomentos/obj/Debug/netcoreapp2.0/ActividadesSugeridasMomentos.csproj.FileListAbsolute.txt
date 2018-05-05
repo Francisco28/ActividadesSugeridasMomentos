@@ -1,0 +1,11 @@
+C:\Users\oFFICEdEPOT\Google Drive\Tec\Aplicaciones Empresariales\ActividadesSugeridas-Momentos\ActividadesSugeridas-Momentos\bin\Debug\netcoreapp2.0\ActividadesSugeridasMomentos.deps.json
+C:\Users\oFFICEdEPOT\Google Drive\Tec\Aplicaciones Empresariales\ActividadesSugeridas-Momentos\ActividadesSugeridas-Momentos\bin\Debug\netcoreapp2.0\ActividadesSugeridasMomentos.runtimeconfig.json
+C:\Users\oFFICEdEPOT\Google Drive\Tec\Aplicaciones Empresariales\ActividadesSugeridas-Momentos\ActividadesSugeridas-Momentos\bin\Debug\netcoreapp2.0\ActividadesSugeridasMomentos.runtimeconfig.dev.json
+C:\Users\oFFICEdEPOT\Google Drive\Tec\Aplicaciones Empresariales\ActividadesSugeridas-Momentos\ActividadesSugeridas-Momentos\bin\Debug\netcoreapp2.0\ActividadesSugeridasMomentos.dll
+C:\Users\oFFICEdEPOT\Google Drive\Tec\Aplicaciones Empresariales\ActividadesSugeridas-Momentos\ActividadesSugeridas-Momentos\obj\Debug\netcoreapp2.0\ActividadesSugeridasMomentos.csprojResolveAssemblyReference.cache
+C:\Users\oFFICEdEPOT\Google Drive\Tec\Aplicaciones Empresariales\ActividadesSugeridas-Momentos\ActividadesSugeridas-Momentos\obj\Debug\netcoreapp2.0\ActividadesSugeridasMomentos.csproj.CoreCompileInputs.cache
+C:\Users\oFFICEdEPOT\Google Drive\Tec\Aplicaciones Empresariales\ActividadesSugeridas-Momentos\ActividadesSugeridas-Momentos\obj\Debug\netcoreapp2.0\ActividadesSugeridasMomentos.AssemblyInfoInputs.cache
+C:\Users\oFFICEdEPOT\Google Drive\Tec\Aplicaciones Empresariales\ActividadesSugeridas-Momentos\ActividadesSugeridas-Momentos\obj\Debug\netcoreapp2.0\ActividadesSugeridasMomentos.AssemblyInfo.cs
+C:\Users\oFFICEdEPOT\Google Drive\Tec\Aplicaciones Empresariales\ActividadesSugeridas-Momentos\ActividadesSugeridas-Momentos\bin\Debug\netcoreapp2.0\ActividadesSugeridasMomentos.pdb
+C:\Users\oFFICEdEPOT\Google Drive\Tec\Aplicaciones Empresariales\ActividadesSugeridas-Momentos\ActividadesSugeridas-Momentos\obj\Debug\netcoreapp2.0\ActividadesSugeridasMomentos.dll
+C:\Users\oFFICEdEPOT\Google Drive\Tec\Aplicaciones Empresariales\ActividadesSugeridas-Momentos\ActividadesSugeridas-Momentos\obj\Debug\netcoreapp2.0\ActividadesSugeridasMomentos.pdb

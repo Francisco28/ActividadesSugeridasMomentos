@@ -1,0 +1,36 @@
+﻿@page
+@model ActividadesSugeridasMomentos.Pages.TipoActividadesSugeridas.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.eva_cat_tipo_actividades_sugeridas[0].DesTipoActividadSug)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.eva_cat_tipo_actividades_sugeridas) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DesTipoActividadSug)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.IdTipoActividadSug">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdTipoActividadSug">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdTipoActividadSug">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

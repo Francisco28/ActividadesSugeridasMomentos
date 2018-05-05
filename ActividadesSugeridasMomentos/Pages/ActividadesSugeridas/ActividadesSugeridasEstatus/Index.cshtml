@@ -1,0 +1,66 @@
+﻿@page
+@model ActividadesSugeridasMomentos.Pages.ActividadesSugeridas.ActividadesSugeridasEstatus.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.eva_actividades_sug_estatus[0].FechaEstatus)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.eva_actividades_sug_estatus[0].Actual)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.eva_actividades_sug_estatus[0].Observacion)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.eva_actividades_sug_estatus[0].ActividadesSugeridas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.eva_actividades_sug_estatus[0].TipoActividadesSugeridas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.eva_actividades_sug_estatus[0].TiposEstatus)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.eva_actividades_sug_estatus) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaEstatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Actual)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Observacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActividadesSugeridas.DesActividad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoActividadesSugeridas.DesTipoActividadSug)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TiposEstatus.IdTipoEstatus)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.IdEstatusDet">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdEstatusDet">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdEstatusDet">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
